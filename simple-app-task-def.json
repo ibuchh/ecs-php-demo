@@ -10,7 +10,7 @@
         {
             "environment": [],
             "name": "simple-app",
-            "image": "linuxacademy/ecs-deep-dive:simple-app",
+            "image": "ibuchh/ecs-deep-dive",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
