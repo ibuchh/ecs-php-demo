@@ -1,0 +1,31 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: ibuchh/ecs-deep-dive
+    working_directory: ./
+    tag: '${{CF_SHORT_REVISION}}'
+    dockerfile: Dockerfile
+  PushingCFVersionToDockerRegistry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{BuildingDockerImage}}'
+    tag: '${{CF_SHORT_REVISION}}'
+    registry: dockerhub
+  PushinglatestToDockerRegistry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{BuildingDockerImage}}'
+    tag: 'latest'
+    registry: dockerhub
+  blueGreenDeploy:
+    title: "Deploying new version ${{CF_SHORT_REVISION}}"
+    image: codefresh/k8s-blue-green:master
+    environment:
+      - SERVICE_NAME=blue-green
+      - DEPLOYMENT_NAME=blue-green
+      - NEW_VERSION=${{CF_SHORT_REVISION}}
+      - HEALTH_SECONDS=60
+      - NAMESPACE=blue-green
+      - KUBE_CONTEXT=standard-cluster-1@spinnaker
