@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: canary-3ddd753
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: canary
+        app: canary
+        version: '3ddd753'
+    spec:
+      containers:
+      - name: canary
+        image: ibuchh/ecs-deep-dive:3ddd753
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+      
