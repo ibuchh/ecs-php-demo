@@ -27,5 +27,5 @@ steps:
       - DEPLOYMENT_NAME=blue-green
       - NEW_VERSION=${{CF_SHORT_REVISION}}
       - HEALTH_SECONDS=60
-      - NAMESPACE=blue-green
+      - NAMESPACE=default
       - KUBE_CONTEXT=standard-cluster-1@spinnaker
