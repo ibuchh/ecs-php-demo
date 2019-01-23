@@ -17,7 +17,7 @@ steps:
     title: Pushing to Docker Registry
     type: push
     candidate: '${{BuildingDockerImage}}'
-    tag: 'latest'
+    tag: 'blue-green'
     registry: dockerhub
   blueGreenDeploy:
     title: "Deploying new version ${{CF_SHORT_REVISION}}"
