@@ -1,5 +1,6 @@
 # Amazon ECS PHP Simple Demo App
+## Canary Deployment
 
-This sample is intended for use with the Amazon ECS Deep Dive CI/CD.
+_Steps_:
 
-The Dockerfile was used to produce the `ibuchh/ecs-deep-dive` image on Docker Hub.
+kubectl create -f k8-deploy/.
