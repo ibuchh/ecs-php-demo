@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: canary-3ddd753
+  name: canary-91c3787
   namespace: default
 spec:
   replicas: 1
@@ -10,11 +10,11 @@ spec:
       labels:
         name: canary
         app: canary
-        version: '3ddd753'
+        version: '91c3787'
     spec:
       containers:
       - name: canary
-        image: ibuchh/ecs-deep-dive:3ddd753
+        image: ibuchh/ecs-deep-dive:91c3787
         imagePullPolicy: Always
         ports:
         - name: http

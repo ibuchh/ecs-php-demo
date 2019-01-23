@@ -11,6 +11,6 @@ spec:
     targetPort: 80
   selector:
     app: canary
-    version: '3ddd753'
+    version: '91c3787'
   sessionAffinity: None
   type: LoadBalancer
