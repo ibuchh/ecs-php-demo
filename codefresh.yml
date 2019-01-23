@@ -19,13 +19,15 @@ steps:
     candidate: '${{BuildingDockerImage}}'
     tag: 'latest'
     registry: dockerhub
-  blueGreenDeploy:
+  canaryDeploy:
     title: "Deploying new version ${{CF_SHORT_REVISION}}"
-    image: codefresh/k8s-blue-green:master
+    image: codefresh/k8s-canary:master
     environment:
-      - SERVICE_NAME=blue-green
-      - DEPLOYMENT_NAME=blue-green
+      - WORKING_VOLUME=.
+      - SERVICE_NAME=canary
+      - DEPLOYMENT_NAME=canary
+      - TRAFFIC_INCREMENT=20
       - NEW_VERSION=${{CF_SHORT_REVISION}}
-      - HEALTH_SECONDS=60
-      - NAMESPACE=blue-green
+      - SLEEP_SECONDS=40
+      - NAMESPACE=default
       - KUBE_CONTEXT=standard-cluster-1@spinnaker
