@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: production
+  namespace: default
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        name: production
+        app: production
+    spec:
+      containers:
+      - name: production
+        image: ibuchh/ecs-deep-dive:latest
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+      
