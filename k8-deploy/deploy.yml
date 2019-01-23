@@ -10,7 +10,6 @@ spec:
       labels:
         name: canary
         app: canary
-        version: '91c3787'
     spec:
       containers:
       - name: canary
