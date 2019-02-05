@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Spinnaker on Oracle Kubernetes Engine</h1>
+                <h1>Spinnaker on Oracle OKE</h1>
 				<p><img src="https://www.spinnaker.io/assets/images/spinnaker-logo-inline.svg" /></p>
 		    <div align="center">
                     <h2>Version   Blue/Green Step-8  Using Spinnaker</h2>
