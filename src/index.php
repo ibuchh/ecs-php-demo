@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Amazon ECS Deep Dive - Linux Academy - Codefresh</title>
+        <title>Oracle OKE Deep Dive - Spinnaker - Codefresh</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <style>body {margin-top: 40px; background-color: #333;}</style>
@@ -15,11 +15,11 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Oracle Kubernetes Engine with Spnnaker</h1>
+                <h1>Spinnaker on Oracle Kubernetes Engine</h1>
 				<p><img src="https://www.spinnaker.io/assets/images/spinnaker-logo-inline.svg" /></p>
 		    <div align="center">
                     <h2>Version   Blue/Green Step-8  Using Spinnaker</h2>
-                <p>This application is now running on a container in Oracle OKE.</p>
+                <p>This application is now running in a container in Oracle OKE.</p>
                 <p>From here, you can commit a change to the Github repo. The Pipeline will run and update the OKE cluster.</p>
                 <p>For example, change <pre>Version 1</pre> above to <pre>Version 2</pre>.</p>
                 <?php
