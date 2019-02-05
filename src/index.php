@@ -15,12 +15,12 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Amazon ECS Deep Dive</h1>
+                <h1>Oracle Kubernetes Engine with Spnnaker</h1>
 				<p><img src="https://www.spinnaker.io/assets/images/spinnaker-logo-inline.svg" /></p>
 		    <div align="center">
                     <h2>Version   Blue/Green Step-8  Using Spinnaker</h2>
-                <p>This application is now running on a container in Amazon ECS.</p>
-                <p>From here, you can commit a change to the Github repo. The CodePipeline will run and update the ECS cluster.</p>
+                <p>This application is now running on a container in Oracle OKE.</p>
+                <p>From here, you can commit a change to the Github repo. The Pipeline will run and update the OKE cluster.</p>
                 <p>For example, change <pre>Version 1</pre> above to <pre>Version 2</pre>.</p>
                 <?php
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
