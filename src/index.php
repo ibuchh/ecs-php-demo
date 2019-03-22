@@ -18,7 +18,7 @@
                 <h1>Spinnaker on Oracle OKE</h1>
 				<p><img src="https://www.spinnaker.io/assets/images/spinnaker-logo-inline.svg" /></p>
 		    <div align="center">
-                    <h2>Highlander Strategy Using Spinnaker</h2>
+                    <h2>Highlander Strategy Using Spinnaker - ISV Demo</h2>
                 <p>This application is now running in a container on Oracle OKE</p>
                 <p>From here, you can commit a change to the Github repo. The Pipeline will run and update the OKE cluster.</p>
                 <p>For example, change <pre>Version 1</pre> above to <pre>Version 2</pre>.</p>
